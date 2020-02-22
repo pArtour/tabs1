@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs 1.0</title>
+</head>
+<body>
+  <style>
+    .tabs-list {
+    display: flex;
+    border: 1px solid green;
+    }
+    .tabs-list-item {
+    list-style: none;
+    flex-grow: 1;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding: 5px 20px;
+    }
+    .tabs-list-item:hover {
+      border: 1px solid red;
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+    .tabs-block {
+    display: none;
+    padding: 20px 10px;
+    border: 1px dotted red;
+    font-size: 30px;
+    }
+    .active-tab {
+    display: block;
+    }
+  </style>
+
+  <div class="tabs-container container">
+    <ul class="tabs-list">
+      <li data-id='0' class="tabs-list-item">Tab 1</li>
+      <li data-id='1' class="tabs-list-item">Tab 2</li>
+      <li data-id='2' class="tabs-list-item">Tab 3</li>
+      <li data-id='3' class="tabs-list-item">Tab 4</li>
+    </ul>
+    <div class="tabs-block-wrapper">
+      <div data-id="0" class="tabs-block active-tab">
+        TAB №1
+      </div>
+      <div data-id="1" class="tabs-block">
+        TAB №2
+      </div>
+      <div data-id="2" class="tabs-block">
+        TAB №3
+      </div>
+      <div data-id="3" class="tabs-block">
+        TAB №4
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
